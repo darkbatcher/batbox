@@ -13,7 +13,7 @@ This file's purpose is to provide some background about the command, and its
 history.
 
 Note also that there is still a maintained version of this command, but it's
-specific to the [picobat](https://github.com/darkbatcher/picobat)
+specific to the [picobat](https://github.com/darkbatcher/picobat) interpreter
 
 ## Sinopsys in brief ##
 
