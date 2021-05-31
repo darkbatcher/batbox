@@ -1,0 +1,15 @@
+BATBOX (/W)
+
+        Makes a delay.
+
+SYNOPSIS
+
+   BATBOX /w duration
+
+        - DURATION : Duration of the delay in MILLISECONDS.
+
+SEE ALSO
+
+        BatBox (/a) (see `ascii'), BatBox (/m) (see `mouse'), BatBox (/f) 
+     (see `fullscr'), BatBox (see `../batbox')
+

@@ -1,0 +1,27 @@
+BATBOX (/S)
+
+     Permet de jouer un son (bruitage ou musique) a partir d'un fichier au 
+     format .WAV.
+
+SYNOPSIS
+
+         BatBox /s Fichier
+
+     Joue un son dans la console.
+
+        - FICHIER : Spécifie le chemin du fichier au format .WAV a jouer. 
+
+     CETTE COMMANDE N'EST PLUS DISPONIBLE à PARTIR DE LA VERSION 3.0
+
+NOTE
+
+     BatBox (-> ``../batbox'') joue les fichiers .WAV de manière synchrone par 
+     défaut. Cepandant, il est envisagé de rendre ce réglage paramétrable dans 
+     une future version de la commande, sûrement par une variable 
+     d'environement. 
+
+A VOIR AUSSI
+
+     BatBox (/a) (-> ``ascii'') , BatBox (/m) (-> ``mouse'') , BatBox (/f) (-> 
+     ``fullscr'') , BatBox (-> ``../batbox'') 
+

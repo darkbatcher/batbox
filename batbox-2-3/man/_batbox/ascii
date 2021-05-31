@@ -1,0 +1,27 @@
+{{BatBox (/a)}}
+
+	Affiche le caractäre correspondant Ö un code {ASCII}
+
+{{Synopsis}}
+
+${	BATBOX /a code}
+
+	- {code} : Code {ASCII} du caractäre Ö afficher
+	
+{{Notes}}
+
+	   Pour obtenir facilement la table des codes {ASCII} et des caractäres
+	correspondants, vous pouvez utiliser le script suivant:
+
+${	@ECHO OFF
+	SET code=0
+	:Boucle
+	BATBOX /d "code %code% : " /a %code% /a 10 /a 13
+	:: les caracteres ASCII 10 et 13 forment un retour a la ligne
+	SET /a code=%code%+1
+	IF NOT %code%==256 GOTO :Boucle
+	PAUSE}
+	
+{{A voir aussi}}
+
+	{disp|BatBox (/d)}, {fullscr|BatBox (/f)}, {sound|BatBox (/s)}, {../batbox|BatBox}

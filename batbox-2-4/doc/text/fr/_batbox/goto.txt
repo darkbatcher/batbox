@@ -1,0 +1,28 @@
+BATBOX (/G)
+
+        Déplace le curseur dans la console.
+
+SYNOPSIS
+
+   BATBOX /g posX posY
+
+        Déplace le cursur à la position spécifiée par POSX et POSY. 
+
+        - POSX : le numéro de la colonne à laquelle le curseur doit être 
+          placé.
+
+        - POSY : le numéro de la ligne à laquelle le curseur doit être 
+          placé.
+
+NOTE
+
+        Les numéros des colonnes et de lignes commencent a 0. C'est à dire que 
+     la case située en haut à gauche est à la colonne 0 et à la ligne 0.
+
+A VOIR AUSSI
+
+        BatBox (/o) (voir `offset'), BatBox (/c) (voir `color'), BatBox (/d) 
+     (voir `disp'), BatBox (/k) (voir `key'), BatBox (voir `../batbox') 
+     BatBox (/o) (voir `offset'), BatBox (/c) (voir `color'), BatBox (/d) 
+     (voir `disp'), BatBox (/k) (voir `key'), BatBox (voir `../batbox') 
+

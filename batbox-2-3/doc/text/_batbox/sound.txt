@@ -1,0 +1,31 @@
+BATBOX (/S
+
+        Permet de jouer une note dans un script batch.
+
+SYNOPSIS
+
+   BatBox /s fréquence durée
+
+        ATTENTION ! CETTE COMMANDE N'EST PLUS DISPONIBLE A PARTIR DE LA VERSION 
+     2.3 DE BATBOX
+
+        Joue un son dans la console.
+
+        - FRéQUENCE : La fréquence de la note à jouer en HERTZ. Cette 
+          fréquence doit être comprise entre 37 Hz et 32767 Hz. Cette plage de 
+          fréquence dépasse la plage des fréquences pouvant être entendus par 
+          des humains.
+
+        - DURéE : La durée de la note en milliseconde.
+
+NOTE
+
+        La fonction utilisée par BATBOX pour produire ce son a été ré-écrite 
+     pour WINDOWS VISTA, il est donc probable que le son ne se joue pas sur 
+     votre machine si vous possèdez une version antérieure de MS-WINDOWS.
+
+A VOIR AUSSI
+
+        BatBox (/a) (voir `ascii'), BatBox (/m) (voir `mouse'), BatBox (/f) 
+     (voir `fullscr'), BatBox (voir `../batbox')
+

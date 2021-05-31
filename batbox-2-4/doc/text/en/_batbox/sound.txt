@@ -1,0 +1,23 @@
+BATBOX (/S)
+
+        Plays a sound (either songs or sound effects) from a .WAV file.
+
+SYNOPSIS
+
+   BatBox /s Files
+
+        Plays a sound.
+
+        - FILES : The path of the .WAV file to be played. 
+
+NOTE
+
+        BatBox (see `../batbox') plays .WAV files using synchronious method. 
+     However, we think about make this modifiable in a next BatBox (see 
+     `../batbox') command version, probably using an environment variable.
+
+SEE ALSO
+
+        BatBox (/a) (see `ascii'), BatBox (/m) (see `mouse'), BatBox (/f) 
+     (see `fullscr'), BatBox (see `../batbox')
+

@@ -1,0 +1,174 @@
+COMMANDE BATBOX
+
+     BATBOX est une commande externe qui permet la CRéATION de GRAPHISMES 
+     directement dans la console, mais aussi de gérer des interactions avec 
+     l'utilisateur.
+
+     Par exemple, BATBOX peut déplacer le curseur dans la console, changer 
+     localement la couleur de celle-ci, ou encore récupérer les clics de 
+     l'utilisateur dans la console.
+
+SYNOPSIS
+
+         BATBOX [/d Texte] [/g X Y] [/c Couleur] [/m] [/k[_]] [/a Caractere] 
+      [/w Temps] [/f Etat] [/s Fichier] [/o OffsetX OffsetY] [/h mode] [/p 
+      mode] [/n] [/y] [/x sprite]...
+         BATBOX [/disp text] [/goto X posY] [/color col] [/mouse] [/key[_]] 
+      ...
+         :: Anciens noms de fonctions deprecies (version 1.0)
+
+     Permet de manipuler l'apparence de la console:
+
+        - /D : Affiche du texte. Voir BatBox (/d) (-> ``_batbox/disp'') .
+
+        - /G : Déplace le curseur. Voir BatBox (/g) (-> ``_batbox/goto'') .
+
+        - /C : Change couleur de la console. Voir BatBox (/c) (-> 
+          ``_batbox/color'') .
+
+        - /M : Récupère un clic. Voir BatBox (/m) (-> ``_batbox/mouse'') .
+
+        - /Y : Récupère un événement de la souris. Cette commande est 
+          uniqument disponnible depuis la version 3.0 . BatBox (/y) (-> 
+          ``_batbox/event'') 
+
+        - /K[_] : Récupère une touche. Voir BatBox (/k) (-> ``_batbox/key'') .
+
+        - /A : Affiche le caractère d'un code ASCII. Depuis la version 2.4, 
+          BATBOX supporte aussi les caractères des encodages multi-octets 
+          (principalement UTF-8). Voir BatBox (/a) (-> ``_batbox/ascii'') .
+
+        - /W : Effectue une temporisation. Voir BatBox (/w) (-> 
+          ``_batbox/wait'') .
+
+        - /F : Change le mode de la console. Voir BatBox (/f) (-> 
+          ``_batbox/fullscr'') . Cette option ne marche que sous WINDOWS XP. 
+          En effet, les pilotes vidéo de la console n'offrent plus de mode 
+          plein écran depuis WINDOWS VISTA. Cette commmande n'est plus 
+          disponible depuis la version 3.0.
+
+        - /S : Joue une musique à partir d'un fichier WAV. Voir BatBox (/s) 
+          (-> ``_batbox/sound'') . Cette option n'est disponible en tant que 
+          telle uniquement depuis la version 2.4. Avant la version 2.3, elle 
+          permettait de jouer une note, mais n'était ni simple a utiliser, ni 
+          robuste. Pour l'ancienne commande, Voir BatBox (/s)(Ancien) (-> 
+          ``_batbox/sound_old'') . Depuis la version 3.0, cette commande n'est 
+          plus disponible.
+
+        - /O : Déplace l'origne de la console. Cette commande est très utile 
+          pour la création de sprites via batbox. Voir BatBox (/o) (-> 
+          ``_batbox/offset'') .
+
+        - /H : Affiche ou cache le curseur de la console. Cette commande est 
+          disponible depuis la version 2.4. Voir BatBox (/h) (-> 
+          ``_batbox/cursor'') .
+
+        - /P : Change le mode de la console . Cette commande est disponible 
+          depuis la version 2.4. Voir BatBox (/p) (-> ``_batbox/console'') .
+
+        - /N : Retourne à la ligne, tout en restant en dessous des dernières 
+          coordonées ou un GOTO a eu lieu. Disponible depuis la version 3.0 . 
+          Voir BatBox (/n) (-> ``_batbox/newline'') .
+
+        - /X SPRITE : Affiche le fichier SPRITE si SPRITE est un sprite généré 
+          avec la commande editor.exe du toolkit BG http://consolesoft.com/ 
+          (-> ``http://consolesoft.com/'') . Voir BatBox (/x) (-> 
+          ``_batbox/sprite_bg'') .
+
+     Si vous voulez créer des graphismes en utilisant BATBOX, il est possible 
+     de générer une ligne de commande pour BATBOX à partir d'un fichier texte 
+     contenant une image en ASCII-ART, en utilisant l'utilitaire SpriteBox (-> 
+     ``spritebox'') .
+
+NOTES
+
+     On peut combiner plusieurs fonctions sur une seule ligne de la commande 
+     BATBOX, comme le signalent les ....
+
+     Ainsi, le script suivant:
+
+         BATBOX /g 10 10
+         BATBOX /d "Hello world"
+         BATBOX /g 0 0
+
+     Peut être raccourci en :
+
+         BATBOX /g 10 10 /d "Hello world" /g 0 0
+
+     Il est possible de spécifier les nombres dans BATBOX dans trois bases 
+     différentes, et cela pour toutes les options. La première est la base 
+     DéCIMALE, pour spécifier cette base, il suffit de mettre le nombre en 
+     décimal. La seconde est la base HEXADéCIMALE, particulièrement utilisée 
+     pour les couleurs. Pour spécifier un nombre dans la base HEXADéCIMALE, il 
+     faut ajouter à ce nombre le préfixe 0X. La dernière est la base OCTALE, 
+     dont l'usage est déconseillé car cette base est peu usitée. Pour 
+     spécifier un nombre en base OCTALE, il faut ajouter à ce nombre le 
+     préfixe 0.
+
+COMPATIBILITé
+
+     Complètement compatible avec CMD.EXE. Cepandant, BATBOX n'est pas une 
+     commande externe native donc il faut la générer dynamiquement par le code 
+     suivant :
+
+        for %%b in ( 
+        4D534346000000004F040000000000002C000000000000000301010001000000
+        00000000470000000100010000080000000000000000F344AC95200062617462
+        6F782E6578650028CF6C7500040008434BB5555F685B55183FB74D42DD62134D
+        6E1156F10E3A19A8C17F7DB050C96C3B9DA6AE34D92A435893DE9BDC9BA5F786
+        9B5B537160A4CDC3ECC00761BE496B063EF822E84357183A331894F5AD2F2A1B
+        EA4349986011A77BA83BFEBE736FDA542A9BA0A7FD9DF37DBFEF3BE7FEBE2FE7
+        26A3A72A4C628CF9589871CE589C1C8C38BBF7A800DD8FAD74B32F1F583BB82C
+        25D60EA674A3A4146D2B67A7A795A9B4695A8E92D1147BC6540C53193E9E54A6
+        2D558B3DB8AFAF75C6D808630949629F2CAE265BDC0F2C24ED97A4A32C0027E0
+        91E136903A5A3B18F3E442BF371497FF5465ACB37DDF76A6E77AE34284B1531D
+        F751EC7F3C62D942DAC17A38E0090AB8BADBC724B5E27F1E3AEB89B3BCBBE8BF
+        C99836317159C79CBFCDE55434CE6A5BE4FCEE397728E98308A6850865CEC29F
+        BBDA55FD3A34BF8E026A5D3889F7D39CF7E57DFA8048AA88A4B0CB73F9AC707D
+        8D516C187A3F5259559EE1D94B4136F0D1BB480FCDC7C0BF9CFB69B3F91DE7BC
+        118437C6FBB784B037A1A159075D79473A1DAA76A3062E171122019F81E7B20A
+        6F903A17AAEE176122FC9C6E1B970BB01B2BB80C9D7E92567B0953B6E683ACC6
+        45C1BE48EC5162257F40D4E213B3FBF8497AFC30A97A0BD9D7FCAF46DC37A546
+        862EA6A744C593486F1EA0441D89C976D64FEC756CFAC3DF8BA3FF841BAADEC2
+        BC14ED71EBB849193F23A3F9ED5D588BB01A37C85D2577CBAD4427299788B845
+        02A89AC68F645105CD450474A54D7911E98D2B14EFA3CFBA3D54A0932C3A6909
+        F173D7B8EC8099C033A214398108F7534B9676BAB5245A54A30E0991F94778FF
+        1D71DA1BD8E35E2B490F8AA7B8BC0A7E6E9002F884D77064766E90E21DA1EA57
+        F0EA0B836178E7EE5EF925FCDE067D17758AF68C4D9CD49FDE6E1E2E51BDD103
+        9579FC25215470C13AEFBB7C1C49737EBAC3BE854769593850FD3E344FEF7D5D
+        FF70F785A5263FCEFEE9B6CECB2DD2BDAA79E6DE9B432576481D10FFFBF67E9D
+        56C271761B78E1215C22AC19ACB3C055E00BE006D0FD709C5DC47A18EB995C7A
+        4A9DB6CA7AF16D3396C9B074E60956CEB0E7E59D2337F00D3509FFC9E80EF72B
+        B814FC601BC76047A37BCB1A4D9E1C1A4FC5861309C65E1B197F7D24F1DCB3AE
+        77223932DEB27BBDDDBDDBA72475AB3C6198AA5526EF2CF8F3C0C7C032B00E34
+        804DA00B0A154FF5FDE6E11DD79CA4A3BE9236D582269EA739439659B20ADA28
+        7E277633296DD639E238B6919971B45D91A119BB64D96356C9700CCBA45DE35A
+        5AF582C7CCE28C7384F20B9A56DC63DF31336B795AEEC1B73A711EFA2F008BC0
+        E7C032F00D701D58076E021B5E8DFF2697B1A26D984E96ACD339CD99D28545E6
+        74DA30D376AE045F9B351CC19FC9E8AE55726CC72A9095B58A1A35203B55B04A
+        A27F591BADA0B56C1BA26D7F1B7F01                                  
+        ) Do >>t.dat (Echo.For b=1 To len^("%%b"^) Step 2
+        ECHO WScript.StdOut.Write Chr^(Clng^("&H"^&Mid^("%%b",b,2^)^)^) : 
+      Next)
+        Cscript /b /e:vbs t.dat>batbox.ex_
+        Del /f /q /a t.dat >nul 2>&1
+        Expand -r batbox.ex_ >nul 2>&1
+        Del /f /q /a batbox.ex_ >nul 2>&1
+
+     BATBOX étant écrit en langage d'assemblage, il n'est pas forcément aisé 
+     de le porter vers un autre système d'exploitation, c'est pourquoi il 
+     n'est disponible que sous MS-WINDOWS.
+
+LICENCE
+
+     BATBOX est un logicel libre distribué sous licence BSD (3 clauses).
+
+AUTEUR
+
+     BATBOX a été écrit par DARKBATCHER. Quelque contribution de Taz8.
+
+SUGGESTIONS, REPORT DE BOGUES
+
+     Vous pouvez addresser vos suggestions, ou reports de bogues pour BATBOX, 
+     à DARKBATCHER AT GMAIL DOT COM.
+

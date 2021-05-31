@@ -1,0 +1,23 @@
+{{BatBox /f}}
+
+	Permet de mettre la console en mode plein ‚cran ou en mode fenˆtre.
+	
+{{Synopsis}}
+
+${	BATBOX /f mode}
+
+	Change le mode de la console.
+
+	- {mode} : mode … appliquer … la console. Doit ˆtre une des deux valeurs suivantes
+		
+		-- {1} : mode plein ‚cran
+		
+		-- {2} : mode fenˆtre
+
+{{Note}}
+	
+	Le mode plein ‚cran ne semble ˆtre support‚ que sous Windows XP.
+	
+{{A voir aussi}}
+
+	{goto|BatBox (/g)}, {ascii|BatBox (/a)}, {color|BatBox (/c)}, {../batbox|BatBox}

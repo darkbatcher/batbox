@@ -1,0 +1,34 @@
+BATBOX /N
+
+     Effectue un retour a ligne et place le curseur en dessous du point auquel 
+     le curseur a été placé par le dernier appel à BatBox (/g) (-> ``goto'') .
+
+SYNOPSIS
+
+        BATBOX /n
+
+     Effectue un retour a ligne et place le curseur en dessous du point auquel 
+     le curseur a été placé par le dernier appel à BatBox (/g) (-> ``goto'') .
+
+     Cette fonction est disponible depuis la version 3.0.
+
+NOTES
+
+     Les coordonées du point ou le curseur a été placé pour la dernière fois 
+     par BATBOX /G sont persistantes. Elles sont stockées dans le fichier 
+     .BB.
+
+     Les coordonées peuvent être réinitialisées en supprimant le fichier .BB 
+     ou via la commande
+
+        BATBOX /g 0 0
+
+     Si BatBox (-> ``../batbox'') n'a pas été configuré pour utiliser les 
+     fichiers .BB, alors s'il n'y a pas eu de commande /G avant, le curseur 
+     est placé à la ligne 1, colonne 0.
+
+A VOIR AUSSI
+
+     BatBox (/k) (-> ``key'') , BatBox (/w) (-> ``wait'') , BatBox (/c) (-> 
+     ``color'') , BatBox (-> ``../batbox'') 
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/o)</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/o)</h1>
+
+<p>Déplace l'origine (le point considéré par <strong>BatBox</strong> comme le point de coordonnées <strong>
+(0,0)</strong> dans la console). Cette commande affecte le comportement des commandes <a href="goto.html" >
+BatBox (/g)</a> suivants.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /o OffsetX OffsetY</code>
+
+<p>Déplace l'origine.</p>
+
+<ul><li> <strong>OffsetX</strong> : <strong>L'abscisse</strong> de la nouvelle origine par rapport au coin supérieur 
+gauche (commence à 0).</li>
+
+<li> <strong>OffsetY</strong> : <strong>L'ordonnée</strong> de la nouvelle origine par rapport au coin supérieur 
+gauche (commence à 0).</li></ul>
+
+<p>Les appels à la commande <a href="goto.html" >BatBox (/g)</a> suivant la commande <strong>BatBox (/o)</strong> se 
+comporteront comme si ils déplaçaient le curseur au point de coordonées <strong>
+(X+OffsetX,Y+OffsetY)</strong>.</p>
+
+<h2>Compatibilité</h2>
+
+<p>Cette commande est disponible depuis la version <strong>2.3</strong>.</p>
+
+<h2>A voir aussi</h2>
+
+<p><a href="goto.html" >BatBox (/g)</a>, <a href="ascii.html" >BatBox (/a)</a>, <a href="color.html" >BatBox (/c)</a>, <a href="../batbox" >BatBox</a></p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

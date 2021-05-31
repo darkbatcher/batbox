@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/s</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/s</h1>
+
+<p>Permet de jouer une note dans un script batch.</p>
+
+<h2>Synopsis</h2>
+
+<code> BatBox /s fréquence durée</code>
+
+<p><strong>Attention ! Cette commande n'est plus disponible a partir de la version 2.3 de 
+BatBox</strong></p>
+
+<p>Joue un son dans la console.</p>
+
+<ul><li> <strong>fréquence</strong> : La fréquence de la note à jouer en <strong>Hertz</strong>. Cette fréquence doit 
+être comprise entre 37 Hz et 32767 Hz. Cette plage de fréquence dépasse la 
+plage des fréquences pouvant être entendus par des humains.</li>
+
+<li> <strong>durée</strong> : La durée de la note en milliseconde.</li></ul>
+
+<h2>Note</h2>
+
+<p>La fonction utilisée par <strong>BatBox</strong> pour produire ce son a été ré-écrite pour <strong>
+windows vista</strong>, il est donc probable que le son ne se joue pas sur votre 
+machine si vous possèdez une version antérieure de <strong>MS-WINDOWS</strong>.</p>
+
+<h2>A voir aussi</h2>
+
+<p><a href="ascii.html" >BatBox (/a)</a>, <a href="mouse.html" >BatBox (/m)</a>, <a href="fullscr.html" >BatBox (/f)</a>, <a href="../batbox" >BatBox</a></p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

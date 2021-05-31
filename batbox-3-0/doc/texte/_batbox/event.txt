@@ -1,0 +1,43 @@
+BATBOX /Y
+
+     Permet de récupérer un évenement souris quelquonque (pas seulement un 
+     clic, comme avec la commande BatBox /m (-> ``_batbox/mouse'') ). 
+
+SYNOPSIS
+
+         BATBOX /y
+
+     Attend un évenement souris sur la console, puis affiche une chaîne du 
+     type X:Y:TYPE. Il faut donc utiliser une boucle FOR (-> ``for'') pour 
+     décoder le resultat.
+
+        - X : Contient la colonne du clic (commence à 0)
+
+        - Y : Contient la ligne du clic (commence à 0)
+
+        - TYPE : Permet d'obtenir le type de clic, choix parmi ces valeurs Il 
+          existe de très nombreuses valeurs posibles, en fonction de 
+          l'événement, il faut donc tester expérimentalement.
+
+NOTES
+
+     Pour faciliter l'utilisation de l'option /Y vous pouvez utiliser la 
+     fonction suivante dans vos batchs:
+
+        :: Mouse ptrX ptrY ptrType
+        :: ptrX : pointeur sur la variable qui recevra la colone
+        :: ptrY : pointeur sur la variable qui recevra la ligne
+        :: ptrType : pointeur sur la variable qui recevra le Type
+        :Event_
+        FOR /F "tokens=1,2,3 delims=:" %%A in ('BatBox /y') DO (
+         SET %3=%%C
+         SET %2=%%B
+         SET %1=%%A
+        )
+        GOTO:EOF
+
+A VOIR AUSSI
+
+     BatBox (/k) (-> ``key'') , BatBox (/w) (-> ``wait'') , BatBox (/c) (-> 
+     ``color'') , BatBox (-> ``../batbox'') 
+

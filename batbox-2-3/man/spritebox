@@ -1,0 +1,35 @@
+{{Commande SpriteBox}}
+
+	{SpriteBox} est une commande … utiliser en combinaison avec la commande {batbox|BatBox}. En effet,
+	Elle permet la g‚n‚ration de lignes de commandes {batbox|BatBox} … partir du document textes pr‚sentant
+	un graphisme en {ASCII-Art}.
+	
+{{Synopsis}}
+
+${	SPRITEBOX fichier}
+
+	Produit une ligne de commande {batbox|BatBox} … partir d'un fichier texte contenant un {ASCII-Art}.
+	
+	- {fichier} : Le nom de fichier contenant l'{ASCII-Art} … convertir en ligne de commande {batbox|BatBox}.
+	
+	La ligne de commande est ensuite affich‚e sur la {sortie standard} (par d‚faut la console, mais peut ˆtre
+	redirig‚e).
+
+{{Compatibilit‚}}
+
+	{SpriteBox} est compatible avec toutes les versions de batbox depuis la {version 1.1}. Il est facilement
+	portable sur d'autres plate-formes.
+
+{{Licence}}
+
+	{SpriteBox} est un logiciel libre distribu‚ sous la {Licence Publique G‚n‚rale GNU
+	(GNU GPL) version 3}.
+	
+	Cette documentation est elle-mˆme distribu‚e sous la {Licence Publique G‚n‚rale GNU
+	(GNU GPL) version 3}
+	
+{{Auteur}}
+
+	{SpriteBox} a ‚t‚ ‚crit par {Darkbatcher}. Merci … {Logan} d'avoir relu cette
+	documentation.
+	

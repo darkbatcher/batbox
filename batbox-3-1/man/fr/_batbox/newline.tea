@@ -1,0 +1,30 @@
+{{BatBox /n}}
+
+	Effectue un retour a ligne et place le curseur en dessous du point
+	auquel le curseur a été placé par le dernier appel à {goto|BatBox (/g)}.
+	
+{{Synopsis}}
+
+${BATBOX /n}
+
+	Effectue un retour a ligne et place le curseur en dessous du point
+	auquel le curseur a été placé par le dernier appel à {goto|BatBox (/g)}.
+
+	Cette fonction est disponible depuis la version 3.0.
+	
+{{Notes}}
+
+	Les coordonées du point ou le curseur a été placé pour la dernière fois
+	par {BatBox /g} sont persistantes. Elles sont stockées dans le fichier {.bb}.
+	
+	Les coordonées peuvent être réinitialisées en supprimant le fichier {.bb} ou
+	via la commande
+	
+${BATBOX /g 0 0}
+
+	Si {../batbox|BatBox} n'a pas été configuré pour utiliser les fichiers {.bb},
+	alors s'il n'y a pas eu de commande {/g} avant, le curseur est placé à la ligne 1, colonne 0.
+	
+{{A voir aussi}}
+
+	{key|BatBox (/k)}, {wait|BatBox (/w)}, {color|BatBox (/c)}, {../batbox|BatBox}

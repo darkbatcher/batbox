@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Dos9 Project :: BatBox (/m)</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>BatBox (/m)</h1>
+
+<p>Gets a mouse input from the user.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /m</code>
+
+<p>Wait until user clicks on the console and then output a string like <strong>X:Y:Type</strong>. 
+Thus, decoding the click result needs a <a href="../for.html" >FOR</a> loop.</p>
+
+<ul><li> <strong>X</strong> : Click's column (start at 0)</li>
+
+<li> <strong>Y</strong> : Click's line (start à 0)</li>
+
+<li> <strong>Type</strong> : The click type:
+
+<ul><li> <strong>1</strong> : left click</li>
+
+<li> <strong>2</strong> : right click</li>
+
+<li> <strong>3</strong> : left double-click (returns first a left click)</li>
+
+<li> <strong>4</strong> : right double-click (returns first a right click)</li></ul></li></ul>
+
+<h2>Notes</h2>
+
+<p><strong>Type</strong> values are for <a href="../batbox.html" >BatBox</a> since version 2.2. Before, the returned <strong>TYPE</strong> is 
+undefined because of bug.</p>
+
+<p>To ease use of switch <strong>/m</strong> you can use the following script :</p>
+
+<code> :: Mouse ptrX ptrY ptrType
+ :: ptrX : pointer to X
+ :: ptrY : pointer to Y
+ :: ptrType : pointer to Type
+ :Mouse_
+ FOR /F "tokens=1,2,3 delims=:" %%A in ('BatBox /m') DO (
+  SET %3=%%C
+  SET %2=%%B
+  SET %1=%%A
+ )
+ GOTO:EOF</code>
+
+<h2>See also</h2>
+
+<p><a href="key.html" >BatBox (/k)</a>, <a href="wait.html" >BatBox (/w)</a>, <a href="color.html" >BatBox (/c)</a>, <a href="../batbox.html" >BatBox</a> <a href="key.html" >BatBox (/k)</a>, <a href="wait.html" >BatBox (/w)</a>, <a href="color.html" >
+BatBox (/c)</a>, <a href="../batbox.html" >BatBox</a> </p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Dos9 manual pages, The Dos9 Project - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>This is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>Please report bugs, and mistakes at : &lt;darkbatcher at gmail dot com&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

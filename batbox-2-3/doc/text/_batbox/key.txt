@@ -1,0 +1,43 @@
+BATBOX (/K)
+
+        Récupère un appui sur une touche, soit en attendant que l'utilisateur 
+     appuie sur une touche, soit sans l'attendre. Et retourne son code dans 
+     %ERRORLEVEL% (voir `errolevel').
+
+SYNOPSIS
+
+   BATBOX /k
+   BATBOX /k_
+  
+
+        Attend ou vérifie l'appui sur une touche.
+
+        - /K : Spécifie que BatBox (voir `batbox') doit attendre jusqu'à ce 
+          que l'utilisateur presse une touche
+
+        - /K_ : Spécifie que BATBOX ne doit pas attendre l'appui sur une 
+          touche. BATBOX retourne alors le code de la touche presséé ou 0
+
+NOTES
+
+        Les codes des touches normales (i.e. les touche de caractères normaux) 
+     sont directement liées à leur code ASCII.
+
+        Les codes supérieurs a 255 sont des codes de touches étendues (les 
+     flèches par exemple).
+
+        On peut facilement trouver le code de la touche via ce petit script:
+
+   @ECHO OFF
+   :Start
+   BATBOX /k
+   ECHO code touche : %ERRORLEVEL%
+   GOTO :Start
+
+A VOIR AUSSI
+
+        BatBox (/d) (voir `disp'), BatBox (/m) (voir `mouse'), BatBox (/a) 
+     (voir `ascii'), BatBox (voir `../batbox') BatBox (/d) (voir `disp'), 
+     BatBox (/m) (voir `mouse'), BatBox (/a) (voir `ascii'), BatBox (voir 
+     `../batbox') 
+

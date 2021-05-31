@@ -1,0 +1,35 @@
+BATBOX /X
+
+     Affiche un SPRITE généré par la commande EDITOR.EXE du toolkit de BG de 
+     Carlos Montiers <http://consolesoft.com (-> ``http://consolesoft.com'') .
+
+SYNOPSIS
+
+        BATBOX /x sprite
+
+     Affiche un SPRITE généré par la commande EDITOR.EXE
+
+        - SPRITE : Le chemin du sprite à afficher.
+
+     Cette fonction est disponible depuis la version 3.0.
+
+NOTES
+
+     Le SPRITE est affiché avec le coin supérieur gauche aux dernières 
+     coordonnées passées à la commande /G. Si aucune commande /G n'a étée 
+     appelée avant l'appel à /X, alors BATBOX utilise le fichier .BB.
+
+     Cette commande est optionnelle, il faut configurer le système de 
+     compilation pour que la commande soit incluse dans la commande généréé.
+
+        BATBOX /g 0 0
+
+     Si BatBox (-> ``../batbox'') n'a pas été configuré pour utiliser les 
+     fichiers .BB, alors s'il n'y a pas eu de commande /G avant, le curseur 
+     est placé à la ligne 1, colonne 0.
+
+A VOIR AUSSI
+
+     BatBox (/k) (-> ``key'') , BatBox (/w) (-> ``wait'') , BatBox (/c) (-> 
+     ``color'') , BatBox (-> ``../batbox'') 
+

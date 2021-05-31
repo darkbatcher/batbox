@@ -1,0 +1,21 @@
+Paquet de distribution de BATBOX.
+
+Liste des sous-répertoires :
+
+	* src     	: Sources de batbox (en asm pour Flat Assembler)
+
+	* man		: Sources de la documentation (pour tea)
+
+	* bin     	: Exécutables
+
+	* doc	  	: Documentation
+
+	* exemples	: Exemples d'utilisation
+
+	* spritebox 	: Dossier de sources de spritebox 
+
+
+Support :
+	http://batch.xoo.it/http://batch.xoo.it/t2243-Commande-Externe-Batbox-v1-0.htm       
+Adresse mail:
+	darkbatcher at dos dot org

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/k)</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/k)</h1>
+
+<p>Récupère un appui sur une touche, soit en attendant que l'utilisateur appuie 
+sur une touche, soit sans l'attendre. Et retourne son code dans <a href="errolevel.html" >%ERRORLEVEL%</a>.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /k
+ BATBOX /k_
+</code>
+
+<p>Attend ou vérifie l'appui sur une touche.</p>
+
+<ul><li> <strong>/k</strong> : Spécifie que <a href="batbox.html" >BatBox</a> doit attendre jusqu'à ce que l'utilisateur presse 
+une touche</li>
+
+<li> <strong>/k_</strong> : Spécifie que <strong>BatBox</strong> ne doit pas attendre l'appui sur une touche. <strong>
+BatBox</strong> retourne alors le code de la touche presséé ou 0</li></ul>
+
+<h2>Notes</h2>
+
+<p>Les codes des touches normales (i.e. les touche de caractères normaux) sont 
+directement liées à leur code <strong>ASCII</strong>.</p>
+
+<p>Les codes supérieurs a 255 sont des codes de touches étendues (les flèches par 
+exemple).</p>
+
+<p>On peut facilement trouver le code de la touche via ce petit script:</p>
+
+<code> @ECHO OFF
+ :Start
+ BATBOX /k
+ ECHO code touche : %ERRORLEVEL%
+ GOTO :Start</code>
+
+<h2>A voir aussi</h2>
+
+<p><a href="disp.html" >BatBox (/d)</a>, <a href="mouse.html" >BatBox (/m)</a>, <a href="ascii.html" >BatBox (/a)</a>, <a href="../batbox" >BatBox</a> <a href="disp.html" >BatBox (/d)</a>, <a href="mouse.html" >BatBox (/m)</a>, <a href="ascii.html" >
+BatBox (/a)</a>, <a href="../batbox" >BatBox</a> </p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

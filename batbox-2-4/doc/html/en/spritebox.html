@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Dos9 Project :: SpriteBox command</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>SpriteBox command</h1>
+
+<p><strong>Spritebox</strong> is a command to be used with <a href="batbox.html" >BatBox</a>. Indeed, it generates <a href="batbox.html" >BatBox</a> 
+command lines from text files containing an <strong>ASCII-Art</strong>.</p>
+
+<h2>Synopsis</h2>
+
+<code> SPRITEBOX [/O] [/E[:]encoding] file</code>
+
+<p>Generates a <strong>BatBox</strong> command line.</p>
+
+<ul><li> <strong>file</strong> : the path of the file containing the <strong>ASCII-Art</strong> to be converted to a <a href="batbox.html" >
+BatBox</a> command-line.</li>
+
+<li> <strong>/E[:]encoding</strong> : specifies the encoding of the file containing the <strong>
+ASCII-Art</strong>. <strong>Encoding</strong> can be one of the following values:
+
+<ul><li> <strong>byte</strong> : the encoding is byte based. Then <strong>spritebox</strong> processes the file like it
+was encoded in a single byte charset, regardless of which charset it is.</li>
+
+<li> <strong>utf-8</strong> : the encoding is <strong>utf-8</strong>. Then it writes compatible command lines for 
+utf-8 characters.</li></ul></li>
+
+<li> <strong>/O</strong> : the background of the sprite will be opaque (ie. space will not be 
+ignored).</li></ul>
+
+<p>The command line is printed to <strong>standard output</strong> (by default the console, but it 
+can be redirected)</p>
+
+<h2>Compatibility</h2>
+
+<p><strong>SpriteBox</strong> is compatible with any batbox version since <strong>version 1.1</strong>. It is 
+easily portable to other operating systems.</p>
+
+<h2>License</h2>
+
+<p><strong>SpriteBox</strong> is a free software distributed under <strong>GNU General Public License 
+version 3</strong>.</p>
+
+<h2>Author</h2>
+
+<p><strong>SpriteBox</strong> has been written by <strong>DarkBatcher</strong>. The project is no more develloped 
+actually. </p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Dos9 manual pages, The Dos9 Project - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>This is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>Please report bugs, and mistakes at : &lt;darkbatcher at gmail dot com&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

@@ -1,0 +1,15 @@
+BATBOX (/W)
+
+     Permet de faire attendre un script batch pendant un temps précis
+
+SYNOPSIS
+
+         BATBOX /w delai
+
+        - DELAI : le temps à attendre, en millisecondes
+
+A VOIR AUSSI
+
+     BatBox (/a) (-> ``ascii'') , BatBox (/m) (-> ``mouse'') , BatBox (/f) (-> 
+     ``fullscr'') , BatBox (-> ``../batbox'') 
+

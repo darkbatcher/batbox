@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le Projet Dos9 :: BatBox /y</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>BatBox /y</h1>
+
+<p>Permet de récupérer un évenement souris quelquonque (pas seulement un clic, 
+comme avec la commande <a href="_batbox/mouse.html" >BatBox /m</a>). </p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /y</code>
+
+<p>Attend un évenement souris sur la console, puis affiche une chaîne du type <strong>
+X:Y:Type</strong>. Il faut donc utiliser une boucle <a href="for.html" >FOR</a> pour décoder le resultat.</p>
+
+<ul><li> <strong>X</strong> : Contient la colonne du clic (commence à 0)</li>
+
+<li> <strong>Y</strong> : Contient la ligne du clic (commence à 0)</li>
+
+<li> <strong>Type</strong> : Permet d'obtenir le type de clic, choix parmi ces valeurs Il existe de
+très nombreuses valeurs posibles, en fonction de l'événement, il faut donc 
+tester expérimentalement.</li></ul>
+
+<h2>Notes</h2>
+
+<p>Pour faciliter l'utilisation de l'option <strong>/y</strong> vous pouvez utiliser la fonction 
+suivante dans vos batchs:</p>
+
+<code>:: Mouse ptrX ptrY ptrType
+:: ptrX : pointeur sur la variable qui recevra la colone
+:: ptrY : pointeur sur la variable qui recevra la ligne
+:: ptrType : pointeur sur la variable qui recevra le Type
+:Event_
+FOR /F "tokens=1,2,3 delims=:" %%A in ('BatBox /y') DO (
+ SET %3=%%C
+ SET %2=%%B
+ SET %1=%%A
+)
+GOTO:EOF</code>
+
+<h2>A voir aussi</h2>
+
+<p><a href="key.html" >BatBox (/k)</a>, <a href="wait.html" >BatBox (/w)</a>, <a href="color.html" >BatBox (/c)</a>, <a href="../batbox.html" >BatBox</a> <a href="key.html" >BatBox (/k)</a>, <a href="wait.html" >BatBox (/w)</a>, <a href="color.html" >
+BatBox (/c)</a>, <a href="../batbox.html" >BatBox</a> </p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Pages de manuels Dos9, Le Projet dos9 - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>Ceci est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+sous les termes de la Licence Publique Générale GNU telle que publiée par la
+Free Software Fundation, soit sous la version 3 ou, (selon votre volonté) n'importe
+quelle version postérieure</p> 
+
+<p>Merci de reporter les bogues et les erreurs à : &lt;darkbatcher at dos9 dot org&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

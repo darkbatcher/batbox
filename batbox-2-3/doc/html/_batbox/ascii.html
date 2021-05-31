@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/a)</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/a)</h1>
+
+<p>Affiche le caractère correspondant à un code <strong>ASCII</strong></p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /a code</code>
+
+<ul><li> <strong>code</strong> : Code <strong>ASCII</strong> du caractère à afficher</li></ul>
+
+<h2>Notes</h2>
+
+<p>Pour obtenir facilement la table des codes <strong>ASCII</strong> et des caractères 
+correspondants, vous pouvez utiliser le script suivant:</p>
+
+<code> @ECHO OFF
+ SET code=0
+ :Boucle
+ BATBOX /d "code %code% : " /a %code% /a 10 /a 13
+ :: les caracteres ASCII 10 et 13 forment un retour a la ligne
+ SET /a code=%code%+1
+ IF NOT %code%==256 GOTO :Boucle
+ PAUSE</code>
+
+<h2>A voir aussi</h2>
+
+<p><a href="disp.html" >BatBox (/d)</a>, <a href="fullscr.html" >BatBox (/f)</a>, <a href="sound.html" >BatBox (/s)</a>, <a href="../batbox" >BatBox</a> <a href="disp.html" >BatBox (/d)</a>, <a href="fullscr.html" >BatBox (/f)</a>, <a href="sound.html" >
+BatBox (/s)</a>, <a href="../batbox" >BatBox</a> </p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

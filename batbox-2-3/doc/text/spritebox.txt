@@ -1,0 +1,38 @@
+COMMANDE SPRITEBOX
+
+        SPRITEBOX est une commande à utiliser en combinaison avec la commande 
+     BatBox (voir `batbox'). En effet, Elle permet la génération de lignes de 
+     commandes BatBox (voir `batbox') à partir du document textes présentant 
+     un graphisme en ASCII-ART.
+
+SYNOPSIS
+
+   SPRITEBOX fichier
+
+        Produit une ligne de commande BatBox (voir `batbox') à partir d'un 
+     fichier texte contenant un ASCII-ART.
+
+        - FICHIER : Le nom de fichier contenant l'ASCII-ART à convertir en 
+          ligne de commande BatBox (voir `batbox').
+
+        La ligne de commande est ensuite affichée sur la SORTIE STANDARD (par 
+     défaut la console, mais peut être redirigée).
+
+COMPATIBILITé
+
+        SPRITEBOX est compatible avec toutes les versions de batbox depuis la 
+     VERSION 1.1. Il est facilement portable sur d'autres plate-formes.
+
+LICENCE
+
+        SPRITEBOX est un logiciel libre distribué sous la LICENCE PUBLIQUE 
+     GéNéRALE GNU (GNU GPL) VERSION 3.
+
+        Cette documentation est elle-même distribuée sous la LICENCE PUBLIQUE 
+     GéNéRALE GNU (GNU GPL) VERSION 3
+
+AUTEUR
+
+        SPRITEBOX a été écrit par DARKBATCHER. Merci à LOGAN d'avoir relu 
+     cette documentation. 
+

@@ -1,0 +1,25 @@
+BATBOX /F
+
+        Set console's mode to fullscreen.
+
+SYNOPSIS
+
+   BATBOX /f mode
+
+        Change console's mode.
+
+        - MODE : The mode to be set. Must be one of the following value.
+
+             - 1 : fullscreen mode.
+
+             - 2 : window mode.
+
+NOTE
+
+        The fullscreen mode seems only to be supported on windows XP
+
+SEE ALSO
+
+        BatBox (/g) (see `goto'), BatBox (/a) (see `ascii'), BatBox (/c) (see
+     `color'), BatBox (see `../batbox')
+

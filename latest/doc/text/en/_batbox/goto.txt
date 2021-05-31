@@ -1,0 +1,24 @@
+BATBOX (/G)
+
+     Moves console's cursor.
+
+SYNOPSIS
+
+         BATBOX /g posX posY
+
+     Moves console's cursor to POSX and POSY. 
+
+        - POSX : The column number where the console's cursor will be moved.
+
+        - POSY : The line number where the console's cursor will be moved.
+
+NOTE
+
+     Column and lines numbers start at 0. IE. the top-left console case is at 
+     line 0 and column 0.
+
+SEE ALSO
+
+     BatBox (/o) (-> ``offset'') , BatBox (/c) (-> ``color'') , BatBox (/d) 
+     (-> ``disp'') , BatBox (/k) (-> ``key'') , BatBox (-> ``../batbox'') 
+

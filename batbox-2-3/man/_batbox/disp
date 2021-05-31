@@ -1,0 +1,28 @@
+{{BatBox (/d)}}
+
+	Affiche du texte dans la console … la position du curseur.
+
+{{Synopsis}}
+
+${	BATBOX /d texte}
+
+	Affiche du texte dans l'invit‚ de commande
+
+	- {texte} : texte … afficher
+	
+{{Notes}}
+
+	   Le commutateur {/d} n'insŠre pas de retour … la ligne a la fin de
+	{texte}, donc le prochain texte affich‚ dans la console sera coll‚ …
+	{texte}.
+	
+	   Le texte {texte} ne doit pas contenir de caractŠres sp‚ciaux,
+	comme des bordures, sinon ceux-ci seront remplac‚s par des caractŠres
+	du type '-' ou '+'. Cette limitation peut ˆtre contournee par le code
+	suivant:
+
+${	BatBox /d "texte"&ECHO bordure}
+
+{{A voir aussi}}
+
+	{goto|BatBox (/g)}, {ascii|BatBox (/a)}, {color|BatBox (/c)}, {../batbox|BatBox} 

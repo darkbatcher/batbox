@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/c)</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/c)</h1>
+
+<p>Permet de mettre de la couleur dans la console, mais de manière locale (à 
+l'inverse de <a href="color.html" >COLOR</a>), c'est-à-dire que la couleur s'applique uniquement à la 
+partie du texte qui sera affichée en suite.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /c code_couleur</code>
+
+<p>Change localement la couleur de la console.</p>
+
+<ul><li> <strong>code_couleur</strong> : un code pour les couleurs, vous pouvez entrer ce code dans 
+différentes bases, mais on le note généralement en <strong>hexadecimal</strong>. Dans ce cas, <strong>
+code_couleur</strong> est de la forme <strong>0xXY</strong> avec: </li>
+
+<li> <strong>X</strong> : la couleur de fond.</li>
+
+<li> <strong>Y</strong> : la couleur du texte.</li></ul>
+
+<p>Les valeurs de <strong>X</strong> et <strong>Y</strong> doivent être choisies parmis ces valeurs :</p>
+
+<ul><li> 0 = Noir </li>
+
+<li> 1 = Bleu foncé</li>
+
+<li> 2 = Vert</li>
+
+<li> 3 = Bleu-gris</li>
+
+<li> 4 = Marron</li>
+
+<li> 5 = Pourpre </li>
+
+<li> 6 = Kaki</li>
+
+<li> 7 = Gris clair </li>
+
+<li> 8 = Gris</li>
+
+<li> 9 = Bleu clair</li>
+
+<li> A = Vert clair</li>
+
+<li> B = Cyan</li>
+
+<li> C = Rouge</li>
+
+<li> D = Rose</li>
+
+<li> E = Jaune</li>
+
+<li> F = Blanc</li></ul>
+
+<h2>Notes</h2>
+
+<p>Les codes de couleurs en hexadecimal sont similaires a ceux de la commande <a href="color.html" >
+COLOR</a>.</p>
+
+<p>Contrairement a la commande <strong>COLOR</strong>, vous pouvez mettre la même couleur pour le 
+fond et le texte, ce qui aura pour effet de dissimuler le texte.</p>
+
+<h2>A voir aussi</h2>
+
+<p><a href="disp.html" >Batbox (/d)</a>,<a href="goto.html" >BatBox (/g)</a>, <a href="key.html" >BatBox (/k)</a>, <a href="../batbox" >BatBox</a> <a href="disp.html" >Batbox (/d)</a>,<a href="goto.html" >BatBox (/g)</a>, <a href="key.html" >
+BatBox (/k)</a>, <a href="../batbox" >BatBox</a> </p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

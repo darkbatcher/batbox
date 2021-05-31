@@ -1,0 +1,126 @@
+{{Commande BatBox}}
+
+	   {BatBox} est une commande externe qui permet la {cr‚ation} de
+	{graphismes} directement dans la console, mais aussi de g‚rer des
+	interactions avec l'utilisateur.
+	
+	   Par exemple, {BatBox} peut d‚placer le curseur dans la console,
+	changer localement la couleur de celle-ci, ou encore r‚cup‚rer les
+	clics de l'utilisateur dans la console.
+
+{{Synopsis}}
+
+${	BATBOX [/d Texte] [/g X Y] [/c Couleur] [/m] [/k[_]] [/a Caractere] [/w Temps] [/f Etat] [/s Frequence Duree] [/o OffsetX OffsetY]...
+	BATBOX [/disp text] [/goto X posY] [/color col] [/mouse] [/key[_]] ...
+	:: Anciens noms de fonctions deprecies (version 1.0)}
+	
+	Permet de manipuler l'apparence de la console:
+		
+		- {/d}	: Affiche du texte. Voir {_batbox/disp|BatBox (/d)}
+		
+		- {/g}	: D‚place le curseur. Voir {_batbox/goto|BatBox (/g)}
+		
+		- {/c}	: Change couleur de la console. Voir {_batbox/color|BatBox (/c)}
+		
+		- {/m}	: R‚cupŠre un clic. Voir {_batbox/mouse|BatBox (/m)}
+		
+		- {/k[_]} : R‚cupŠre une touche. Voir {_batbox/key|BatBox (/k)}
+		
+		- {/a}	: Affiche le caractŠre d'un code ASCII. Voir {_batbox/ascii|BatBox (/a)}
+		
+		- {/w}	: Effectue une temporisation. Voir {_batbox/wait|BatBox (/w)}
+		
+		- {/f}	: Change le mode de la console. Voir {_batbox/fullscr|BatBox (/f)}
+		
+		- {/s}	: Joue une note. Cette fonction n'est plus incluse depuis la version {2.2}. Elle n'‚tait ni
+		fa‡ile a manipuler ni robuste. Voir {_batbox/sound|BatBox (/s)}
+		
+		- {/o} : D‚place l'origne de la console. Cette commande est trŠs utile pour la cr‚ation de sprites
+		via batbox. Voir {_batbox/offset|BatBox (/o)}.
+		
+		Si vous voulez cr‚er des graphismes en utilisant {BatBox}, il est possible de g‚n‚rer une ligne de
+		commande pour {BatBox} … partir d'un fichier texte contenant une image en {ASCII-Art}, en utilisant
+		l'utilitaire {spritebox|SpriteBox}.
+		
+{{Notes}}
+	
+	   On peut combiner plusieurs fonctions sur une seule ligne de la
+	commande {BatBox}, comme le signalent les {...}.
+	
+	Ainsi, le script suivant:
+
+${	BATBOX /g 10 10
+	BATBOX /d "Hello world"
+	BATBOX /g 0 0}
+	
+	Peut ˆtre raccourci en :
+	
+${	BATBOX /g 10 10 /d "Hello world" /g 0 0}
+
+	Il est possible de sp‚cifier les nombres dans {BatBox} dans trois bases diff‚rentes,
+	et cela pour toutes les options. La premiŠre est la base {d‚cimale}, pour sp‚cifier
+	cette base, il suffit de mettre le nombre en d‚cimal. La seconde est la base {hexad‚cimale},
+	particuliŠrement utilis‚e pour les couleurs. Pour sp‚cifier un nombre dans la base {hexad‚cimale},
+	il faut ajouter … ce nombre le pr‚fixe {0x}. La derniŠre est la base {octale}, dont l'usage est
+	d‚conseill‚ car peu usit‚e. Pour sp‚cifier un nombre en base {octale}, il faut ajouter … ce nombre
+	le pr‚fixe {0}.
+
+
+{{Compatibilite}}
+
+	   ComplŠtement compatible avec {CMD.exe}. Cepandant, {BatBox} n'est
+	pas une commande externe native donc il faut la g‚n‚rer dynamiquement
+	par le code suivant :
+
+${	for %%b in ( 
+	4D5343460000000073030000000000002C000000000000000301010001000000
+	00000000470000000100010000060000000000000000FE4259B5200062617462
+	6F782E657865003FD9412724030006434BB5545F485361143F5737F0CF726B3A
+	102ABB528B1EC24813421026D3529AB59C184460D7ED6EF7CE79EFB8F74A562F
+	0B1D543EF5143DC60483C27AF0C14248B18710A4979ECA40426A0329A1B21ECA
+	AF73EE9D4E21B287FAB6DF77CFF99DF37DDFEF3B3B779D1752C001800D5CC018
+	808F1C1C3ED879A41015FB9F56C064E942ED141758A8ED96649D4F6A6A4C1306
+	F8B0A028AAC1F789BC36A8F0B2C2B79E0DF1036A44ACDB557670638F601B4080
+	E3A0C3FBFDDC06B7044EAE9CE34EA2283041C3B505A48E9E450079B99B69C05B
+	FC4B1457BC75DD6666DECD8F981BE02EF71797FDC7A32E9A100C7C1EB1E505D9
+	2CDD5BC7252AC57F1E92ABCA0771EB21D968029C98E76125D25F9967D1ED838C
+	8372D6F24E093AD9175832FFADCAD43C7F8C459F9442D39D1E8C3947C6913F15
+	7BB79A7BCD18CBA6D10BB24687B9E33226E4E6904E5DE37A9DE90A3C9C7926F1
+	98F48C73E401F2CC731FBD66BAB2335D6E8689B0336A13E6798C76B601772CB6
+	F7E2565EEAD64C1589A931C93092B34B2ECE4E1C6BB466EBE82C1DDD4E8A3ED3
+	5ED25137B163B861AE9ED8B7D452F182D42F945F4D111213920E14F28B908D57
+	B3C61233710903560539A9DA3CD0E257901F6EA600D664019744879B295EE44C
+	3F43EF9BFD303A3FD172A61FE13CDABC17FD9BEBB39F5CD7DFD3BDEEF155565D
+	6E63B4D8CC0E9EEF910E15745C5D47755EAB32AB245726A20A890C55275B4616
+	952417A44035BA71FC8498670A970F3F77CCCD7E2862E3F524D44EBFBB6D741F
+	3D46F7A4DF3847E885988B835574AF0EDE4893F9056F1874970F26101F111711
+	B6DD3EA8411C472C20A611FD31211C8D0CA89737DAEC4665A1E532F8CA8DA13F
+	ED2E7013682FBA7FDFA29DA11E7F57775D6B2000A7DBBACEB4051AEA4D077EE0
+	02076E54833881E846488864FEB09DE2D8AAA2113222ED82124988E48744C3AF
+	2ABA9A103BF17F6A3BD32D0E192D86A1C97D8386B82DE21FD474550BAABA6CC8
+	AA42ABBA4421920F7628C941A385F213A298DCB6AE55D69309E18A79D40C6A9A
+	47BC422C2356106B799D7F8AE16D345931A264F5C644232C9916990382AC085A
+	4C475F1C920D93EFEF932C4B3734434D00FC02                          
+	) Do >>t.dat (Echo.For b=1 To len^("%%b"^) Step 2
+	ECHO WScript.StdOut.Write Chr^(Clng^("&H"^&Mid^("%%b",b,2^)^)^) : Next)
+	Cscript /b /e:vbs t.dat>batbox.ex_
+	Del /f /q /a t.dat >nul 2>&1
+	Expand -r batbox.ex_ >nul 2>&1
+	Del /f /q /a batbox.ex_ >nul 2>&1}
+	
+	{BatBox} ‚tant ‚crit en langage d'assemblage, il n'est pas forc‚ment ais‚
+	de le porter vers un autre systŠme d'exploitation, c'est pourquoi il n'est
+	disponible que sous {MS-WINDOWS}.
+
+{{Licence}}
+
+	{BatBox} est un logiciel libre distribu‚ sous la {Licence Publique G‚n‚rale GNU
+	(GNU GPL) version 3}.
+	
+	Cette documentation est elle-mˆme distribu‚e sous la {Licence Publique G‚n‚rale GNU
+	(GNU GPL) version 3}
+	
+{{Auteur}}
+
+	{BatBox} a ‚t‚ ‚crit par {Darkbatcher}. Merci … {Logan} d'avoir relu cette
+	documentation. Le projet n'est plus en d‚veloppement actuellement.

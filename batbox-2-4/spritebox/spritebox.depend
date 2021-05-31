@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1377208363 source:c:\users\romain\desktop\batbox\spritebox\spritebox.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LibDos9.h"
+
+1377196628 c:\users\romain\desktop\batbox\spritebox\libdos9.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<math.h>
+	<dirent.h>
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<windows.h>
+	<process.h>
+	<io.h>
+	<unistd.h>
+	<pthread.h>
+	<stdarg.h>
+

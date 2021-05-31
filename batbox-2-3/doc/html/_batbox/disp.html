@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BatBox (/d)</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script><h1>BatBox (/d)</h1>
+
+<p>Affiche du texte dans la console à la position du curseur.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /d texte</code>
+
+<p>Affiche du texte dans l'invité de commande</p>
+
+<ul><li> <strong>texte</strong> : texte à afficher</li></ul>
+
+<h2>Notes</h2>
+
+<p>Le commutateur <strong>/d</strong> n'insère pas de retour à la ligne a la fin de <strong>texte</strong>, donc 
+le prochain texte affiché dans la console sera collé à <strong>texte</strong>.</p>
+
+<p>Le texte <strong>texte</strong> ne doit pas contenir de caractères spéciaux, comme des 
+bordures, sinon ceux-ci seront remplacés par des caractères du type '-' ou '+'. 
+Cette limitation peut être contournee par le code suivant:</p>
+
+<code> BatBox /d "texte"&amp;ECHO bordure</code>
+
+<h2>A voir aussi</h2>
+
+<p><a href="goto.html" >BatBox (/g)</a>, <a href="ascii.html" >BatBox (/a)</a>, <a href="color.html" >BatBox (/c)</a>, <a href="../batbox" >BatBox</a> <a href="goto.html" >BatBox (/g)</a>, <a href="ascii.html" >BatBox (/a)</a>, <a href="color.html" >
+BatBox (/c)</a>, <a href="../batbox" >BatBox</a> </p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

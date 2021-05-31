@@ -1,0 +1,37 @@
+﻿{{BatBox (/o)}}
+
+	Déplace l'origine (le point considéré par {BatBox} comme le point de coordonnées {(0,0)} dans la console).
+	Cette commande affecte le comportement des commandes {goto|BatBox (/g)} suivants.
+	
+{{Synopsis}}
+
+${	BATBOX /o OffsetX OffsetY}
+
+	Déplace l'origine.
+	
+	- {OffsetX} : {L'abscisse} de la nouvelle origine par rapport au coin supérieur gauche (commence à 0).
+	
+	- {OffsetY} : {L'ordonnée} de la nouvelle origine par rapport au coin supérieur gauche (commence à 0).
+	
+	Les appels à la commande {goto|BatBox (/g)} suivant la commande {BatBox (/o)} se comporteront comme
+	si ils déplaçaient le curseur au point de coordonées {(X+OffsetX,Y+OffsetY)}.
+
+{{Notes}}
+
+	Les coordonées du point d'origine de l'offest sont persistantes.
+	Elles sont stockées dans le fichier {.bb}.
+	
+	Les coordonées peuvent être réinitialisées en supprimant le fichier {.bb} ou
+	via la commande
+	
+${BATBOX /o 0 0}
+
+	Si votre version de BatBox n'a pas été configurée pour supporter le fichier {.bb}, alors BatBox suppose que la coordonnée d'origine est (0,0).
+
+{{Compatibilité}}
+
+	Cette commande est disponible depuis la version {2.3}.
+	
+{{A voir aussi}}
+
+	{goto|BatBox (/g)}, {ascii|BatBox (/a)}, {color|BatBox (/c)}, {../batbox|BatBox}

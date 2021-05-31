@@ -1,0 +1,25 @@
+{{BatBox (/g)}}
+
+	D‚place le curseur dans la console.
+	
+{{Synopsis}}
+
+${	BATBOX /g posX posY}
+
+	D‚place le cursur … la position sp‚cifi‚e par {posX} et {posY}.	
+		
+		- {posX} : le num‚ro de la colonne … laquelle le curseur doit 
+		  ˆtre plac‚.
+		  
+		- {posY} : le num‚ro de la ligne … laquelle le curseur doit
+		  ˆtre plac‚.
+	
+{{Note}}
+
+	   Les num‚ros des colonnes et de lignes commencent a 0. C'est …
+	dire que la case situ‚e en haut … gauche est … la colonne 0 et …
+	la ligne 0.
+	
+{{A voir aussi}}
+
+	{offset|BatBox (/o)}, {color|BatBox (/c)}, {disp|BatBox (/d)}, {key|BatBox (/k)}, {../batbox|BatBox}

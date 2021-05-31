@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Dos9 Project :: BatBox (/p)</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>BatBox (/p)</h1>
+
+<p>Changes command prompt's window display mode. For exemple, maximizes of 
+minimizes the window.</p>
+
+<h2>Synopsis</h2>
+
+<code> BatBox /p mode</code>
+
+<p>Changes command prompt's window display mode.</p>
+
+<ul><li> <strong>mode</strong> : Specify the display mode that will be set for the command prompt's 
+window.
+
+<ul><li> <strong>0</strong> : Hides the window.</li>
+
+<li> <strong>1</strong> : Activate and show the window, restoring it to its original size. This 
+value should not be used because it's reserved to first call to show window. You
+should use value <strong>9</strong> instead.</li>
+
+<li> <strong>2</strong> : Activate the window and minimizes it (show it in task bar).</li>
+
+<li> <strong>3</strong> : Activate the window and make it maximized. </li>
+
+<li> <strong>4</strong> : Shows the window restored to its original size. Same result as value <strong>1</strong>, 
+execpt that the window does not obtain focus.</li>
+
+<li> <strong>5</strong> : Activate the window without modifiing it.</li>
+
+<li> <strong>6</strong> : Minimizes the window and activate another window. </li>
+
+<li> <strong>7</strong> : Minimizes the window. Same result as value <strong>2</strong> except that the window is 
+not activated.</li>
+
+<li> <strong>8</strong> : Shows the window without modifing it. Same result as value <strong>1</strong>, except 
+that the window does not obtain focus.</li>
+
+<li> <strong>9</strong> : Activate the window and set its size and its position to the initial 
+values if the window was either maximized or minimized.</li>
+
+<li> <strong>10</strong> : Show the windows and set its size and its postion to the default 
+values.</li>
+
+<li> <strong>11</strong> : Minimizes the windows, even if the command prompt does not respond. This
+value is not suposed to be used, as it would be surprising that <a href="../batbox.html" >BatBox</a> continue
+running even if the command prompt does not respond.</li></ul></li></ul>
+
+<h2>See also</h2>
+
+<p><a href="ascii.html" >BatBox (/a)</a>, <a href="mouse.html" >BatBox (/m)</a>, <a href="fullscr.html" >BatBox (/f)</a>, <a href="../batbox.html" >BatBox</a></p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Dos9 manual pages, The Dos9 Project - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>This is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.</p>
+
+<p>Please report bugs, and mistakes at : &lt;darkbatcher at gmail dot com&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

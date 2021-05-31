@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le Projet Dos9 :: Commande SpriteBox</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>Commande SpriteBox</h1>
+
+<p><strong>SpriteBox</strong> est une commande à utiliser en combinaison avec la commande <a href="batbox.html" >BatBox</a>. 
+En effet, Elle permet la génération de lignes de commandes <a href="batbox.html" >BatBox</a> à partir du 
+document textes présentant un graphisme en <strong>ASCII-Art</strong>.</p>
+
+<h2>Synopsis</h2>
+
+<code> SPRITEBOX [/O] [/E[:]encodage] fichier</code>
+
+<p>Produit une ligne de commande <a href="batbox.html" >BatBox</a> à partir d'un fichier texte contenant un <strong>
+ASCII-Art</strong>.</p>
+
+<ul><li> <strong>fichier</strong> : Le nom de fichier contenant l'<strong>ASCII-Art</strong> à convertir en ligne de 
+commande <a href="batbox.html" >BatBox</a>.</li>
+
+<li> <strong>/E[:]encodage</strong> : Sélectionne l'encodage du fichier source, ainsi que le 
+l'encodage final de la ligne de commande <a href="batbox.html" >Batbox</a>. Les encodages supportés sont 
+:
+
+<ul><li> <strong>UTF-8</strong> : l'encodage est l'encodage <strong>UTF-8</strong> qui utilise les caractères du jeu 
+universel <strong>UNICODE</strong>.</li>
+
+<li> <strong>BYTE</strong> : N'importe quel autre encodage basé sur un octet. (exemple: ASCII, 
+ANSI, CP850...).</li></ul></li>
+
+<li> <strong>/O</strong> : le fond du sprite sera opaque, c'est à dire que les espaces dans 
+l'<strong>ASCII-Art</strong> ne seront pas ignorés. Par défaut, les espaces sont ignorés, et le
+fond du sprite est donc transparent.</li></ul>
+
+<p>La ligne de commande est ensuite affichée sur la <strong>sortie standard</strong> (par défaut la
+console, mais peut être redirigée).</p>
+
+<h2>Compatibilité</h2>
+
+<p><strong>SpriteBox</strong> est compatible avec toutes les versions de batbox depuis la <strong>version 
+1.1</strong>. Il est facilement portable sur d'autres plate-formes.</p>
+
+<h2>Licence</h2>
+
+<p><strong>SpriteBox</strong> est un logiciel libre distribué sous la <strong>Licence Publique Générale GNU
+(GNU GPL) version 3</strong>.</p>
+
+<p>Cette documentation est elle-même distribuée sous la <strong>Licence Publique Générale 
+GNU (GNU GPL) version 3</strong></p>
+
+<h2>Auteur</h2>
+
+<p><strong>SpriteBox</strong> a été écrit par <strong>Darkbatcher</strong>. Merci à <strong>Logan</strong> d'avoir relu cette 
+documentation. </p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Pages de manuels Dos9, Le Projet dos9 - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>Ceci est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+sous les termes de la Licence Publique Générale GNU telle que publiée par la
+Free Software Fundation, soit sous la version 3 ou, (selon votre volonté) n'importe
+quelle version postérieure</p> 
+
+<p>Merci de reporter les bogues et les erreurs à : &lt;darkbatcher at gmail dot com&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

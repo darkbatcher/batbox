@@ -1,0 +1,26 @@
+BATBOX /F
+
+        Permet de mettre la console en mode plein écran ou en mode fenêtre.
+
+SYNOPSIS
+
+   BATBOX /f mode
+
+        Change le mode de la console.
+
+        - MODE : mode à appliquer à la console. Doit être une des deux valeurs
+          suivantes
+
+             - 1 : mode plein écran
+
+             - 2 : mode fenêtre
+
+NOTE
+
+        Le mode plein écran ne semble être supporté que sous Windows XP.
+
+A VOIR AUSSI
+
+        BatBox (/g) (voir `goto'), BatBox (/a) (voir `ascii'), BatBox (/c) 
+     (voir `color'), BatBox (voir `../batbox')
+

@@ -1,0 +1,68 @@
+BATBOX (/C)
+
+     Permet de mettre de la couleur dans la console, mais de manière locale (à 
+     l'inverse de COLOR (-> ``../color'') ), c'est-à-dire que la couleur 
+     s'applique uniquement à la partie du texte qui sera affichée en suite.
+
+SYNOPSIS
+
+         BATBOX /c code_couleur
+
+     Change localement la couleur de la console.
+
+        - CODE_COULEUR : un code pour les couleurs, vous pouvez entrer ce code 
+          dans différentes bases, mais on le note généralement en 
+          HEXADECIMAL. Dans ce cas, CODE_COULEUR est de la forme 0XXY avec: 
+
+             - X : la couleur de fond.
+
+             - Y : la couleur du texte.
+
+     Les valeurs de couleurs pour X et Y doivent être choisies parmis ces 
+     valeurs :
+
+        - 0 : Noir 
+
+        - 1 : Bleu foncé
+
+        - 2 : Vert
+
+        - 3 : Bleu-gris
+
+        - 4 : Marron
+
+        - 5 : Pourpre 
+
+        - 6 : Kaki
+
+        - 7 : Gris clair 
+
+        - 8 : Gris
+
+        - 9 : Bleu clair
+
+        - A : Vert clair
+
+        - B : Cyan
+
+        - C : Rouge
+
+        - D : Rose
+
+        - E : Jaune
+
+        - F : Blanc
+
+NOTES
+
+     Les codes de couleurs en hexadecimal sont similaires a ceux de la 
+     commande COLOR (-> ``../color'') .
+
+     Contrairement a la commande COLOR, vous pouvez mettre la même couleur 
+     pour le fond et le texte, ce qui aura pour effet de dissimuler le texte.
+
+A VOIR AUSSI
+
+     Batbox (/d) (-> ``disp'') ,BatBox (/g) (-> ``goto'') , BatBox (/k) (-> 
+     ``key'') , BatBox (-> ``../batbox'') 
+

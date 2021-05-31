@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le Projet Dos9 :: Commande BatBox</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>Commande BatBox</h1>
+
+<p><strong>BatBox</strong> est une commande externe qui permet la <strong>création</strong> de <strong>graphismes</strong> 
+directement dans la console, mais aussi de gérer des interactions avec 
+l'utilisateur.</p>
+
+<p>Par exemple, <strong>BatBox</strong> peut déplacer le curseur dans la console, changer 
+localement la couleur de celle-ci, ou encore récupérer les clics de 
+l'utilisateur dans la console.</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX [/d Texte] [/g X Y] [/c Couleur] [/m] [/k[_]] [/a Caractere] [/w Temps] [/f Etat] [/s Fichier] [/o OffsetX OffsetY] [/h mode] [/p mode]...
+ BATBOX [/disp text] [/goto X posY] [/color col] [/mouse] [/key[_]] ...
+ :: Anciens noms de fonctions deprecies (version 1.0)</code>
+
+<p>Permet de manipuler l'apparence de la console:</p>
+
+<ul><li> <strong>/d</strong> : Affiche du texte. Voir <a href="_batbox/disp.html" >BatBox (/d)</a>.</li>
+
+<li> <strong>/g</strong> : Déplace le curseur. Voir <a href="_batbox/goto.html" >BatBox (/g)</a>.</li>
+
+<li> <strong>/c</strong> : Change couleur de la console. Voir <a href="_batbox/color.html" >BatBox (/c)</a>.</li>
+
+<li> <strong>/m</strong> : Récupère un clic. Voir <a href="_batbox/mouse.html" >BatBox (/m)</a>.</li>
+
+<li> <strong>/k[_]</strong> : Récupère une touche. Voir <a href="_batbox/key.html" >BatBox (/k)</a>.</li>
+
+<li> <strong>/a</strong> : Affiche le caractère d'un code ASCII. Depuis la version <strong>2.4</strong>, <strong>BatBox</strong> 
+supporte aussi les caractères des encodages multi-octets (principalement <strong>
+UTF-8</strong>). Voir <a href="_batbox/ascii.html" >BatBox (/a)</a>.</li>
+
+<li> <strong>/w</strong> : Effectue une temporisation. Voir <a href="_batbox/wait.html" >BatBox (/w)</a>.</li>
+
+<li> <strong>/f</strong> : Change le mode de la console. Voir <a href="_batbox/fullscr.html" >BatBox (/f)</a>. Cette option ne marche 
+que sous <strong>windows XP</strong>. En effet, les pilotes vidéo de la console n'offrent plus 
+de mode plein écran depuis <strong>Windows Vista</strong>.</li>
+
+<li> <strong>/s</strong> : Joue une musique à partir d'un fichier <strong>WAV</strong>. Voir <a href="_batbox/sound.html" >BatBox (/s)</a>. Cette 
+option n'est disponible en tant que telle uniquement depuis la version <strong>2.4</strong>. 
+Avant la version <strong>2.3</strong>, elle permettait de jouer une note, mais n'était ni simple
+a utiliser, ni robuste. Pour l'ancienne commande, Voir <a href="_batbox/sound_old.html" >BatBox (/s)(Ancien)</a></li>
+
+<li> <strong>/o</strong> : Déplace l'origne de la console. Cette commande est très utile pour la 
+création de sprites via batbox. Voir <a href="_batbox/offset.html" >BatBox (/o)</a>.</li>
+
+<li> <strong>/h</strong> : Affiche ou cache le curseur de la console. Cette commande est disponible
+depuis la version <strong>2.4</strong>. Voir <a href="_batbox/cursor.html" >BatBox (/h)</a>.</li>
+
+<li> <strong>/p</strong> : Change le mode de la console . Cette commande est disponible depuis la 
+version <strong>2.4</strong>. Voir <a href="_batbox/console.html" >BatBox (/p)</a>.</li></ul>
+
+<p>Si vous voulez créer des graphismes en utilisant <strong>BatBox</strong>, il est possible de 
+générer une ligne de commande pour <strong>BatBox</strong> à partir d'un fichier texte contenant
+une image en <strong>ASCII-Art</strong>, en utilisant l'utilitaire <a href="spritebox.html" >SpriteBox</a>.</p>
+
+<h2>Notes</h2>
+
+<p>On peut combiner plusieurs fonctions sur une seule ligne de la commande <strong>
+BatBox</strong>, comme le signalent les <strong>...</strong>.</p>
+
+<p>Ainsi, le script suivant:</p>
+
+<code> BATBOX /g 10 10
+ BATBOX /d "Hello world"
+ BATBOX /g 0 0</code>
+
+<p>Peut être raccourci en :</p>
+
+<code> BATBOX /g 10 10 /d "Hello world" /g 0 0</code>
+
+<p>Il est possible de spécifier les nombres dans <strong>BatBox</strong> dans trois bases 
+différentes, et cela pour toutes les options. La première est la base <strong>
+décimale</strong>, pour spécifier cette base, il suffit de mettre le nombre en décimal. 
+La seconde est la base <strong>hexadécimale</strong>, particulièrement utilisée pour les 
+couleurs. Pour spécifier un nombre dans la base <strong>hexadécimale</strong>, il faut ajouter à
+ce nombre le préfixe <strong>0x</strong>. La dernière est la base <strong>octale</strong>, dont l'usage est 
+déconseillé car peu usitée. Pour spécifier un nombre en base <strong>octale</strong>, il faut 
+ajouter à ce nombre le préfixe <strong>0</strong>.</p>
+
+<h2>Compatibilite</h2>
+
+<p>Complètement compatible avec <strong>CMD.exe</strong>. Cepandant, <strong>BatBox</strong> n'est pas une commande
+externe native donc il faut la générer dynamiquement par le code suivant :</p>
+
+<code> for %%b in ( 
+ 4D534346000000001D040000000000002C000000000000000301010001000000
+ 000000004700000001000100000800000000000000001C437A4D200062617462
+ 6F782E6578650000D407ABCE030008434BBD557F681B75147F973665B3B5894D
+ 0E0B3A768355C6C0E20F8A522964B475AB4B66C8C5056430D3E692BB2CBD0B77
+ 171B717F6434016705270CEC1F433A2A8A0A4E648E3AFF584BC58158F06FFDC3
+ E21FDAFC63FDC71FE0B6F3F3EEAE4D0AC32AA85FFAB97BEFF3DEF77DDF7BDF77
+ 69E2F91A0944D44961721CA2182B5831DA7DD580DEFDD77BE9EADEB5034B427C
+ ED405AD52CA96C1A05333B2D4D6575DDB0A54945322BBAA4E9D2D8B3B2346DE4
+ 94C17BEF39B81523394E1417047AE2FD7DA92D6E9D4242B7203C4D5D50BA7C32
+ DC06CE8EDF01223F5DE4EF2FC9E35FD7883ADAF76D7BFAAABFFEE823AA04FE46
+ B1FFF21ACC97B236DE6F07FD84BABCBCDBD70BDC8AFF78A935314645EFA5DAFC
+ 28E3E1880F32FD8B23DE8AC468F12C2BBFFA4A15CAC671A43AFA6AA4F6A5F4A8
+ 93FFB49B86DFDCEC8B51A87E18FCD1C2F73F37BF711C67630FB4A43374D68DD8
+ 198D51731574ED65E174A8D18BC31DF1204C8DE550FD03F08ED80F6D844B0E35
+ BA5D33134187C7C411253EF71A6EB123F831CE1AE0695DAC3379D925AF815C59
+ 0F0B41E69C21EFE91DBD878F3EC619BD08D79BC1EB7DDE782FB2A0BA8F77FAD8
+ 310AF7E67E762CC2516E67F7822DF63B4355372221A2D73A417DC53DC9E37BC0
+ CF8EB001CD58C396FCEC08DB03A1C60D68BF05E7A1DC86146A5CC1736EE435E8
+ E7EFAC6C86CFFDC0055DBEE037E40D583B5CEF64E6A4FA5E2B8F737790DD15AF
+ 2561AEABCCC45B5C0DB765E3224BDC8B660606F5525B1BFAE1BEC143B7B8C017
+ DD6E8A72A48738521AF6F3373100603238630977DEEC61CB307F786ED1DB772A
+ F1B6CDDBBEB1F61455829FB95315C02C174976C479DEBEC61EFDE08B1E79089B
+ 673FEF595DF931E0BC7B03B9CE0679F43AE7F6F16BEE81C6B7A13A7FAEAB45F2
+ EE7DC0A281DCB0FBB7737CAD708C3E047E024E01F7DF17A387812F804F80EF80
+ A338200C1C06CE14B253B9696346B5CAF9DFA3AD38A723445191E8EB488B2B42
+ BE057CD4C655212F0117DAB83AE4F9C8DD3FAF847C7234951E1C8BC7E9F878EA
+ C478FCF1C75C859E93C7535B7266E24422E189B4E0075AD80E982C655F928D8A
+ 9E3BC2DAB2CF2F6FDB65D598C9687ACE9861ED108A7A127806C80135E0227009
+ B80A7C05ACFB85FF135F7CD68A2DDBB963593D5752DC73157BD4D02DA3A424F0
+ 9BBE93492B55FB886D9BDA64C5567658462BA6659849C3D26CCDD079574AC9E6
+ 7CE3845EAED85CA65C5294F25DF64DE879C3CF6517BED591568C31CD2AA3996E
+ BA8FE0B2878131200D9C02F2A257E95FD988CAA6A6DB7977680A8A3DA5BA128B
+ D3594DCF9A050BBA52D56C973F33A97A92659BB651FAFFFFCFECB6FE04      
+ ) Do &gt;&gt;t.dat (Echo.For b=1 To len^("%%b"^) Step 2
+ ECHO WScript.StdOut.Write Chr^(Clng^("&amp;H"^&amp;Mid^("%%b",b,2^)^)^) : Next)
+ Cscript /b /e:vbs t.dat&gt;batbox.ex_
+ Del /f /q /a t.dat &gt;nul 2&gt;&amp;1
+ Expand -r batbox.ex_ &gt;nul 2&gt;&amp;1
+ Del /f /q /a batbox.ex_ &gt;nul 2&gt;&amp;1</code>
+
+<p><strong>BatBox</strong> étant écrit en langage d'assemblage, il n'est pas forcément aisé de le 
+porter vers un autre système d'exploitation, c'est pourquoi il n'est disponible 
+que sous <strong>MS-WINDOWS</strong>.</p>
+
+<h2>Licence</h2>
+
+<p><strong>BatBox</strong> est un logiciel libre distribué sous la <strong>Licence Publique Générale GNU 
+(GNU GPL) version 3</strong>.</p>
+
+<p>Cette documentation est elle-même distribuée sous la <strong>Licence Publique Générale 
+GNU (GNU GPL) version 3</strong></p>
+
+<h2>Auteur</h2>
+
+<p><strong>BatBox</strong> a été écrit par <strong>Darkbatcher</strong>. Merci à <strong>Logan</strong> d'avoir relu cette 
+documentation. Le projet n'est plus en développement actuellement.</p>
+
+<h2>Suggestions, Report de Bogues</h2>
+
+<p>Vous pouvez addresser vos suggestions, ou reports de bogues pour <strong>BatBox</strong>, à <strong>
+darkbatcher at gmail dot com</strong>.</p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Pages de manuels Dos9, Le Projet dos9 - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>Ceci est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+sous les termes de la Licence Publique Générale GNU telle que publiée par la
+Free Software Fundation, soit sous la version 3 ou, (selon votre volonté) n'importe
+quelle version postérieure</p> 
+
+<p>Merci de reporter les bogues et les erreurs à : &lt;darkbatcher at gmail dot com&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>

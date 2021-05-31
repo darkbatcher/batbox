@@ -1,0 +1,31 @@
+BATBOX (/D)
+
+        Affiche du texte dans la console à la position du curseur.
+
+SYNOPSIS
+
+   BATBOX /d texte
+
+        Affiche du texte dans l'invité de commande
+
+        - TEXTE : texte à afficher
+
+NOTES
+
+        Le commutateur /D n'insère pas de retour à la ligne a la fin de 
+     TEXTE, donc le prochain texte affiché dans la console sera collé à 
+     TEXTE.
+
+        Le texte TEXTE ne doit pas contenir de caractères spéciaux, comme des 
+     bordures, sinon ceux-ci seront remplacés par des caractères du type '-' ou
+     '+'. Cette limitation peut être contournee par le code suivant:
+
+   BatBox /d "texte"&ECHO bordure
+
+A VOIR AUSSI
+
+        BatBox (/g) (voir `goto'), BatBox (/a) (voir `ascii'), BatBox (/c) 
+     (voir `color'), BatBox (voir `../batbox') BatBox (/g) (voir `goto'), 
+     BatBox (/a) (voir `ascii'), BatBox (/c) (voir `color'), BatBox (voir 
+     `../batbox') 
+

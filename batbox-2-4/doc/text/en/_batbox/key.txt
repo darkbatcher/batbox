@@ -1,0 +1,42 @@
+BATBOX (/K)
+
+        Gets a keystroke, whether waiting for user to hit a key or not. Then 
+     returns key code in %ERRORLEVEL% (see `../errorlevel').
+
+        Récupère un appui sur une touche, soit en attendant que l'utilisateur 
+     appuie sur une touche, soit sans l'attendre. Et retourne son code dans 
+     %ERRORLEVEL% (see `errolevel').
+
+SYNOPSIS
+
+   BATBOX /k
+   BATBOX /k_
+  
+
+        Gets a keystroke, whether waiting for user to hit a key or not.
+
+        - /K : BatBox (see `../batbox') will wait until the user hit a key.
+
+        - /K_ : BatBox (see `../batbox') will not wait until the user hit a 
+          key. If no key is pressed, then it returns 0.
+
+NOTES
+
+        Standard key(ie. corresponding to a character of basic US-ASCII 
+     charset) codes are linked directly with their ASCII codes.
+
+        Other key codes can be retrieved by the simple following script :
+
+   @ECHO OFF
+   :Start
+   BATBOX /k
+   ECHO code touche : %ERRORLEVEL%
+   GOTO :Start
+
+SEE ALSO
+
+        BatBox (/d) (see `disp'), BatBox (/m) (see `mouse'), BatBox (/a) (see
+     `ascii'), BatBox (see `../batbox') BatBox (/d) (see `disp'), BatBox 
+     (/m) (see `mouse'), BatBox (/a) (see `ascii'), BatBox (see 
+     `../batbox') 
+

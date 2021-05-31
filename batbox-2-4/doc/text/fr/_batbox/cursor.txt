@@ -1,0 +1,22 @@
+BATBOX (/H)
+
+        Affiche ou cache le curseur de l'invité de commande.
+
+SYNOPSIS
+
+   BatBox /h mode
+
+        Affiche ou cache le curseur de l'invité de commande.
+
+        - MODE : Spécifie le mode d'affichage du curseur. Doit être une des 
+          deux valeurs suivantes (par défaut 1) :
+
+             - 0 : Le curseur est caché.
+
+             - 1 : Le curseur est affiché.
+
+A VOIR AUSSI
+
+        BatBox (/a) (voir `ascii'), BatBox (/m) (voir `mouse'), BatBox (/f) 
+     (voir `fullscr'), BatBox (voir `../batbox')
+

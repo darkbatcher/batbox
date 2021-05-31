@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Le Projet Dos9 :: BatBox (/m)</title>
+	<meta charset="utf-8" />
+<style>
+
+	code {
+		margin-left: 2%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		display: block;
+	}
+	
+	li {
+		padding: 0.3%;
+	}
+	
+</style></head>
+<body>
+<h1>BatBox (/m)</h1>
+
+<p>Permet de récupérer les clics à la souris de l'utilisateur</p>
+
+<h2>Synopsis</h2>
+
+<code> BATBOX /m</code>
+
+<p>Attend que l'utilisateur clique sur la console, puis affiche une chaîne du type <strong>
+X:Y:Type</strong>. Il faut donc utiliser une boucle <a href="for.html" >FOR</a> pour décoder le resultat.</p>
+
+<ul><li> <strong>X</strong> : Contient la colonne du clic (commence à 0)</li>
+
+<li> <strong>Y</strong> : Contient la ligne du clic (commence à 0)</li>
+
+<li> <strong>Type</strong> : Permet d'obtenir le type de clic, choix parmi ces valeurs
+
+<ul><li> <strong>1</strong> : clic gauche</li>
+
+<li> <strong>2</strong> : clic droit</li>
+
+<li> <strong>3</strong> : double-clic gauche (retourne d'abord un clic gauche)</li>
+
+<li> <strong>4</strong> : double-clic droit (retourne d'abord un clic gauche)</li></ul></li></ul>
+
+<h2>Notes</h2>
+
+<p>Pour le parametre <strong>Type</strong> les valeurs indiquées ne sont valables que pour les 
+versions de <a href="batbox.html" >BatBox</a> supérieures ou égales a 2.2. Pour les versions précédentes, 
+le résultat de <strong>Type</strong> est totalement indéfini à cause d'un bug.</p>
+
+<p>Pour faciliter l'utilisation de l'option <strong>/m</strong> vous pouvez utiliser la fonction 
+suivante dans vos batchs:</p>
+
+<code>:: Mouse ptrX ptrY ptrType
+:: ptrX : pointeur sur la variable qui recevra la colone
+:: ptrY : pointeur sur la variable qui recevra la ligne
+:: ptrType : pointeur sur la variable qui recevra le Type
+:Mouse_
+FOR /F "tokens=1,2,3 delims=:" %%A in ('BatBox /m') DO (
+ SET %3=%%C
+ SET %2=%%B
+ SET %1=%%A
+)
+GOTO:EOF</code>
+
+<h2>A voir aussi</h2>
+
+<p><a href="key.html" >BatBox (/k)</a>, <a href="wait.html" >BatBox (/w)</a>, <a href="color.html" >BatBox (/c)</a>, <a href="event.html" >BatBox (/y)</a>, <a href="../batbox.html" >BatBox</a> <a href="event.html" >BatBox (/y)</a>, <a href="../batbox.html" >
+BatBox</a> </p>
+
+<hr/>
+
+<!-- Copyright notice don't remove it !
+     this is part of the Dos9 project manual pages -->
+
+<p>Pages de manuels Dos9, Le Projet dos9 - Copyright &copy; 2010-2013  Darkbatcher </p>
+
+<p>Ceci est un logiciel libre : vous pouvez le redistribuer et/ou le modifier
+sous les termes de la Licence Publique Générale GNU telle que publiée par la
+Free Software Fundation, soit sous la version 3 ou, (selon votre volonté) n'importe
+quelle version postérieure</p> 
+
+<p>Merci de reporter les bogues et les erreurs à : &lt;darkbatcher at dos9 dot org&gt;</p>
+
+<script type="text/javascript">
+
+	var codeBlocs=document.querySelectorAll('code');
+	
+	for (var i=0;i<codeBlocs.length;i++) {
+		codeBlocs[i].innerHTML = codeBlocs[i].innerHTML.replace(/\n/gim, '<br />', 'm');
+	}
+	
+</script></body>
+</html>
