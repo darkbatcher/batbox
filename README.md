@@ -15,7 +15,7 @@ history.
 Note also that there is still a maintained version of this command, but it's
 specific to the [picobat](https://github.com/darkbatcher/picobat) interpreter
 
-## Sinopsys in brief ##
+## Synopsis in brief ##
 
     
     BATBOX  [/a chr] [/d string] [/g X Y] [/k[_]] [/w duration] [/c color] [/n] [/h show] [/m[_]  | /y] ...
